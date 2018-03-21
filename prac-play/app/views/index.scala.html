@@ -1,0 +1,15 @@
+@(msg: String, form1: Form[HomeController.SampleForm])
+
+@main("sample page") {
+
+	<h1>aaa</h1>
+	<p>@msg</p>
+    @helper.form(action = routes.HomeController.send){
+    	@(helper.inputText(
+    		field = form1("message")
+    	))
+    	
+    	<input type="submit">
+    }
+
+}
